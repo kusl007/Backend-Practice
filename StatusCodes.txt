@@ -1,0 +1,6 @@
+status codes
+
+status:
+1**
+100
+101
