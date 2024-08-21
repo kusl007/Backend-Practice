@@ -1,6 +1,29 @@
-status codes
+http status codes
 
 status:
+
 1**
-100
-101
+100 : server accepted request
+101 : http-web sockets or send(redirect ) to other protocol
+
+2**
+200:ok (no any problem)
+201:  created (when the res creates something in db then sucess is 201)
+202:given async res to server (accepted by server and is in the process )
+203:in distributed system (the req is forwarded to the other server)
+
+3**
+301:the resources you are finding is moved from here find in other places
+307: temporary redirect
+308: permanent redirect
+
+4**
+400:bad request
+401: unauthorized
+403: forbidden
+404:not found
+
+5**
+500:ISE (internal server error)
+502: bad gateway
+503:service unavailable
