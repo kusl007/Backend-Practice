@@ -24,4 +24,20 @@ app.get('/check', function (req, res,next) {
    console.log(req.cookies.name)
    res.send("checking")
   })
+
+  //dynamic routing
+
+  app.get("/profile/:name",
+    function (req, res,next) {
+   
+      res.send("hello " + req.params.name)
+     }
+  )
+
+  app.get("/profile/:name/:age",
+    function (req, res,next) {
+   
+      res.send("hello " + req.params.name+" your age is "+req.params.age)
+     }
+  )
 app.listen(3000)
