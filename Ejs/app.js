@@ -10,12 +10,23 @@ app.get('/', function (req, res) {
 app.get('/profile', function (req, res) {
   res.render('profile')
 })
-app.get('/check', function (req, res) {
-    console.log(req.query)
-  res.send('working ')
-})
+
 app.get('/form', function (req, res) {
   res.render('form')
 })
 
+app.get('/check', function (req, res) {
+    console.log(req.query)
+  res.send('working ')
+})
+
+app.get('/formPost', function (req, res) {
+    res.render('postForm')
+})
+
+app.post('/checkPost', function (req, res) {
+    console.log(req.body)      
+    console.log("working")
+    res.send('working')
+})
 app.listen(3000)
