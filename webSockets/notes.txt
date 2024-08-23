@@ -1,0 +1,9 @@
+backend:
+it contains both socket and io
+io=> when you want to give message to more than 1 user
+socket=>when you want to give message to only 1 user 
+
+
+
+forntend:
+it contains mainly socket vatiable
