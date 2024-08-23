@@ -29,6 +29,10 @@ io.on("connection",function(socket){
         socket.broadcast.emit("type")
         // socket.broadcast.emit("type")
     })
+
+
+    //making rooms 
+    socket.join("room1");
 })
 app.get("/" ,(req,res)=>{
     res.render("index")
