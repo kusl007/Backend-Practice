@@ -9,7 +9,12 @@ const io=socketIO(server)
 app.set("view engine","ejs");
 
 io.on("connection",function(socket){
-    console.log(socket.id);
+    console.log(socket.id)
+
+socket.on("abcd",function(){
+    console.log("hey")
+})
+
     socket.on("disconnect",function(){
         console.log("disconnected")
     })
