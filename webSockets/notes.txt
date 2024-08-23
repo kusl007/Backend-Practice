@@ -7,3 +7,7 @@ socket=>when you want to give message to only 1 user
 
 forntend:
 it contains mainly socket vatiable
+
+
+
+message pathako thau ma emit hunxa ani receive garne thau ma on use garna parxa in both case either frontend or backend

@@ -11,7 +11,10 @@
 
     <script>
        var socket= io()
-       socket.emit("abcd")
+       socket.emit("abcd",12)
+       socket.on("defg",function(){
+        console.log("defg received")
+       })
     </script>
     
 </body>

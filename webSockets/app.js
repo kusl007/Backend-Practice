@@ -11,8 +11,14 @@ app.set("view engine","ejs");
 io.on("connection",function(socket){
     console.log(socket.id)
 
-socket.on("abcd",function(){
-    console.log("hey")
+socket.on("abcd",function(data){
+    // console.log(`hey ${data}`)
+    // io.emit  //sabai lai event pathaune
+    // socket.emit //akolai matra pathaune
+
+
+    // io.emit("defg")
+    socket.emit("defg")
 })
 
     socket.on("disconnect",function(){
