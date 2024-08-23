@@ -11,18 +11,23 @@ app.set("view engine","ejs");
 io.on("connection",function(socket){
     console.log(socket.id)
 
-socket.on("abcd",function(data){
-    // console.log(`hey ${data}`)
-    // io.emit  //sabai lai event pathaune
-    // socket.emit //akolai matra pathaune
+// socket.on("abcd",function(data){
+//     // console.log(`hey ${data}`)
+//     // io.emit  //sabai lai event pathaune
+//     // socket.emit //akolai matra pathaune
 
 
-    // io.emit("defg")
-    socket.emit("defg")
-})
+//     // io.emit("defg")
+//     socket.emit("defg")
+// })
 
-    socket.on("disconnect",function(){
-        console.log("disconnected")
+//     socket.on("disconnect",function(){
+//         console.log("disconnected")
+//     })
+
+    socket.on("typing",function(){
+        socket.broadcast.emit("type")
+        // socket.broadcast.emit("type")
     })
 })
 app.get("/" ,(req,res)=>{
