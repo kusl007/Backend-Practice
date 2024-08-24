@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <title>Document</title>
+</head>
+<body>
+    <div class="container min-w-screen h-screen bg-zinc-900 flex items-center justify-center">
+        <div class="buttons flex gap-6 text-bold">
+            <div class="connect bg-blue-600 rounded py-3 px-12 flex items-center justify-center text-white cursor-pointer active:scale-[0.9]">Connect to server</div>
+            <div class="disconnect bg-red-600 rounded py-3 px-12 flex items-center justify-center text-white cursor-pointer active:scale-[0.9]">Disconnect from server</div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+
+    <script>
+        let connect=document.querySelector(".connect")
+        let disconnect=document.querySelector(".disconnect")
+        let socket;
+
+        connect.addEventListener("click", function(e){
+            socket=io();
+        })
+        disconnect.addEventListener("click", function(e){
+            socket.disconnect();
+        })
+      
+    </script>
+</body>
+</html>
