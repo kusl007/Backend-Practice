@@ -1,6 +1,44 @@
 
-html{
-    background-color: black;
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color:black
 }
 
+/* Container for the videos */
+#videos {
+    
 
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px); /* Adjust height for the controls at the bottom */
+}
+
+/* Style for video elements */
+.video-player {
+    width: 100%;
+    flex: 1;
+    object-fit: cover; /* Ensures videos cover the element without distortion */
+}
+
+/* Container for the controls */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Fixed height for the controls area */
+    background-color: #333; /* Background color for better visibility */
+}
+
+/* Style for control buttons */
+.control-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Space between controls */
+    cursor: pointer;
+}
+
+.control-container svg {
+    fill: white; /* Color of the SVG icons */
+}

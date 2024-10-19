@@ -1,0 +1,21 @@
+console cloud google ma jane 
+and then select a project to the top of the screen
+add project or select a project
+goto api and services and enable api and services 
+search google + api and enable
+oauth condent screen
+user type=>external
+app name
+gmail
+developer contact info ma ni mail haldine
+save and continue
+scope select email , profile or any other acc to wish
+save and continue
+add a test user
+come to dashboard and credentials
+create credentials=>oauth client id
+app type=> web app
+name=>
+authirized redirect url=>http://localhost:3000/auth/google/callback
+create and you will get client id and client secret
+

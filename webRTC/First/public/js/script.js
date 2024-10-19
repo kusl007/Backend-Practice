@@ -14,6 +14,7 @@ const rtcSettings = {
 
 const initialize = async () => { 
     try {
+        socket.on("signalingMessage", handleSignalingMessage);
         local = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
         initiateOffer();
     } catch (error) {
@@ -69,4 +70,22 @@ const createPeerConnection = async () => {
     }
 };
 
+
+const handleSignalingMessage = async (message) => {
+    try {
+       const{type,offer,answer,candidate} = JSON.parse(message);
+       if(type=="offer"){
+           handleOffer(offer);
+       }
+       if(type=="answer"){  
+        handleAnswer(answer);
+       }
+       if(type=="candidate" && peerConnection){ 
+  peerConnection.addIceCandidate(candidate);
+         }
+
+    } catch (error) {
+        console.error("Error handling signaling message: ", error);
+    }
+}
 initialize();
